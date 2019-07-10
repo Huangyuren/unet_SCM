@@ -1,4 +1,4 @@
-# Implementation of deep learning framework -- Unet, using Keras
+# Hands-on Medical image segmentation using U-net architecture implemented by deep learning framework Keras
 
 The architecture was inspired by [U-Net: Convolutional Networks for Biomedical Image Segmentation](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
 
@@ -8,14 +8,21 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 
 ### Data
 
-Presented as 'data' folder
+We crop the raw images which looks similar to images in 'data/test_orig_png' to 256*256 as the input to Unet.
+
+Train: 350 preproccessed images in data/train
+
+Validation: 35 images in data/validation
+
+Test: 20 images in data/test/
 
 ### Data augmentation
 
-The data for training contains 30 512*512 images, which are far not enough to feed a deep learning neural network. I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation.
+I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation.
 
-See dataPrepare.ipynb and data.py for detail.
+We augmented the train dataset to 2000 images in total for nice segmentation result.
 
+See data.py for detail.
 
 ### Model
 
@@ -23,17 +30,20 @@ See dataPrepare.ipynb and data.py for detail.
 
 This deep neural network is implemented with Keras functional API, which makes it extremely easy to experiment with different interesting architectures.
 
-Output from the network is a 512*512 which represents mask that should be learned. Sigmoid activation function
+Output from the network is a 256*256 which represents mask that should be learned. Sigmoid activation function
 makes sure that mask pixels are in \[0, 1\] range.
 
 ### Training
 
-The model is trained for 5 epochs.
+The descent model is trained on Nvidia GTX-1080 8G GPU for 209 epochs.
 
-After 5 epochs, calculated accuracy is about 0.97.
+We use dice score as our metrics.
 
-Loss function for the training is basically just a binary crossentropy.
+After 209 epochs, calculated accuracy is about 0.98.
 
+Loss function for the training is taking an minus of dice score.
+
+See model.py for detail
 
 ---
 
@@ -43,18 +53,17 @@ Loss function for the training is basically just a binary crossentropy.
 
 This tutorial depends on the following libraries:
 
-* Tensorflow
-* Keras >= 1.0
-
-Also, this code should be compatible with Python versions 2.7-3.5.
-
-### Run main.py
-
-You will see the predicted results of test image in data/membrane/test
-
-### Or follow notebook trainUnet
+* Tensorflow-gpu >= 1.9.0
+* Keras for 2.2.4
 
 
+### Run testMyUnet.ipynb
+
+You can simply run this nootbook for loading in model and testing for it. (Perhapes some management for the path if necessary)
+
+### Or run trainMyUnet.ipynb
+
+Also if you are interested in training your model from 'data' file, run this notebook and adjust the hyperparameters on your will.
 
 ### Results
 
