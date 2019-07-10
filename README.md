@@ -69,9 +69,9 @@ Also if you are interested in training your model from 'data' file, run this not
 
 Use the trained model to do segmentation on test images, the result is statisfactory.
 
-![img/demo-0.png](img/demo_0.png)
+![img/demo-0.png](img/demo-0.png)
 
-![img/demo-1.png](img/demo_1.png)
+![img/demo-1.png](img/demo-1.png)
 
 
 ## About Keras
