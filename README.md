@@ -10,17 +10,15 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 
 We crop the raw images which looks similar to images in 'data/test_orig_png' to 256*256 as the input to Unet.
 
-Train: 350 preproccessed images in data/train
+* Train: 350 preproccessed images in data/train
 
-Validation: 35 images in data/validation
+* Validation: 35 images in data/validation
 
-Test: 20 images in data/test/
+* Test: 20 images in data/test/
 
 ### Data augmentation
 
-I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation.
-
-We augmented the train dataset to 2000 images in total for nice segmentation result.
+I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation. We augmented the train dataset to 2000 images in total for nice segmentation result.
 
 See data.py for detail.
 
@@ -35,13 +33,7 @@ makes sure that mask pixels are in \[0, 1\] range.
 
 ### Training
 
-The descent model is trained on Nvidia GTX-1080 8G GPU for 209 epochs.
-
-We use dice score as our metrics.
-
-After 209 epochs, calculated accuracy is about 0.98.
-
-Loss function for the training is taking an minus of dice score.
+The descent model is trained on NVIDIA GTX-1080 8G GPU for 209 epochs, and for the result evalution, We use dice score as our metrics. After 209 epochs, calculated accuracy is about 0.98.
 
 See model.py for detail
 
