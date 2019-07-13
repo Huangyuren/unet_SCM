@@ -17,10 +17,10 @@ We crop the raw images which looks similar to images in 'data/test_orig_png' to 
 * Test: 20 images in data/test/
 
 ### Data augmentation
+* Notice: I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
 
 I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation. We augmented the train dataset to 2000 images in total for nice segmentation result.
 
-See data.py for detail.
 
 ### Model
 
