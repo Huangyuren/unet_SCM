@@ -7,7 +7,8 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 ## Overview
 
 ### Data
-#### Notice: I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
+#### Notice: 
+####    I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
 
 We crop the raw images which looks similar to images in 'data/test_orig_png' to 256*256 as the input to Unet.
 
