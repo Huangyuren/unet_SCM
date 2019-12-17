@@ -58,18 +58,17 @@ This notebook will load in output pictures from our Unet, then do some post-proc
 
 Also if you are interested in training your own model from scratch, run this notebook and adjust the hyperparameters on your will.\
 Input images would be something like this:\
-In folder "data/train/image":
-![img/HNC01-1001_crop.png](img/HNC01-1001_crop.png)\
-In folder "data/train/label":
-![img/HNC01-1001_label.png](img/HNC01-1001_label.png)
+In folder "data/train/image" and in folder "data/train/label" respectively\
+![image](img/HNC01-1001_crop.png)
+![image](img/HNC01-1001_label.png)
 
 ### Results
 
 Use the trained model to do segmentation on test images, the result is statisfactory.
 
-![img/demo-0.png](img/demo-0.png)
+![image](img/demo-0.png)
 
-![img/demo-1.png](img/demo-1.png)
+![image](img/demo-1.png)
 
 
 ## About Keras
