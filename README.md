@@ -8,7 +8,7 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 #### &nbsp;&nbsp;&nbsp;&nbsp;I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
 -----
 ### Data
-We crop the raw images which looks similar to images in 'data/test_orig_png' to 256*256 as the input to Unet.
+We crop the raw images to size of 256*256 as the input to Unet.
 
 * Train: 350 preproccessed images in data/train
 
@@ -16,9 +16,11 @@ We crop the raw images which looks similar to images in 'data/test_orig_png' to 
 
 * Test: 20 images in data/test/
 
+You should place pictures (should be square) in directory: "data/train" to train.
+
 ### Data augmentation
 
-I use a module called ImageDataGenerator in keras.preprocessing.image to do data augmentation. We augmented the train dataset to 2000 images in total for nice segmentation result.
+Using ImageDataGenerator in keras.preprocessing.image to do data augmentation. We augmented the train dataset to 2000 images in total for nice segmentation result.
 
 
 ### Model
@@ -31,7 +33,7 @@ Output from the network is a 256*256 which represents mask that should be learne
 makes sure that mask pixels are in \[0, 1\] range.
 
 ### Training
-
+[Important] All images used in taining should be '.tif' format\
 The descent model is trained on NVIDIA GTX-1080 8G GPU for 209 epochs, and for the result evalution, We use dice score as our metrics. After 209 epochs, calculated accuracy is about 0.98.
 
 See model.py for detail
@@ -50,11 +52,16 @@ This tutorial depends on the following libraries:
 
 ### Run testMyUnet.ipynb
 
-You can simply run this nootbook for loading in model and testing for it. (Perhapes some management for the path if necessary)
+This notebook will load in output pictures from our Unet, then do some post-process then paste back to the original full-scale original pictures and save results. (Perhapes some management for the path if necessary)
 
 ### Or run trainMyUnet.ipynb
 
-Also if you are interested in training your model from 'data' file, run this notebook and adjust the hyperparameters on your will.
+Also if you are interested in training your own model from scratch, run this notebook and adjust the hyperparameters on your will.\
+Input images would be something like this:\
+In folder "data/train/image":
+![alt text](img/train-0.png)
+In folder "data/train/label":
+![alt text](img/label-0.png)
 
 ### Results
 
