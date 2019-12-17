@@ -59,9 +59,9 @@ This notebook will load in output pictures from our Unet, then do some post-proc
 Also if you are interested in training your own model from scratch, run this notebook and adjust the hyperparameters on your will.\
 Input images would be something like this:\
 In folder "data/train/image":
-![alt text](img/train-0.png)
+![img/HNC01-1001_crop.png](img/HNC01-1001_crop.png)
 In folder "data/train/label":
-![alt text](img/label-0.png)
+![img/HNC01-1001_label.png](img/HNC01-1001_label.png)
 
 ### Results
 
