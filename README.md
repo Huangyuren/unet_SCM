@@ -2,14 +2,12 @@
 
 The architecture was inspired by [U-Net: Convolutional Networks for Biomedical Image Segmentation](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/).
 
----
 
 ## Overview
-
-### Data
 #### Notice: 
-####    I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
-
+#### &nbsp;&nbsp;&nbsp;&nbsp;I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
+-----
+### Data
 We crop the raw images which looks similar to images in 'data/test_orig_png' to 256*256 as the input to Unet.
 
 * Train: 350 preproccessed images in data/train
