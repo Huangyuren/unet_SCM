@@ -33,7 +33,7 @@ Output from the network is a 256*256 which represents mask that should be learne
 makes sure that mask pixels are in \[0, 1\] range.
 
 ### Training
-* [Important] All images used in taining should be '.tif' format\
+* `[Important]` All images used in training should be '.tif' format, otherwise it may produce whole black output images.
 * The descent model is trained on NVIDIA GTX-1080 8G GPU for 209 epochs, and for the result evalution, We use dice score as our metrics. After 209 epochs, calculated accuracy is about 0.98.
 
 * See model.py for detail
