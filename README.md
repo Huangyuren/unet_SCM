@@ -5,7 +5,7 @@ The architecture was inspired by [U-Net: Convolutional Networks for Biomedical I
 
 ## Overview
 #### Notice: 
-#### &nbsp;&nbsp;&nbsp;&nbsp;I can not open my data for the moment, since that contains patiences' privacy problem. I can show my code which works nice for your reference only.
+#### &nbsp;&nbsp;&nbsp;&nbsp;This repo contains no training dataset due to privacy concern. Codes are for your reference only.
 -----
 ### Data
 We crop the raw images to size of 256*256 as the input to Unet.
@@ -69,18 +69,3 @@ Use the trained model to do segmentation on test images, the result is statisfac
 ![image](img/demo-0.png)
 
 ![image](img/demo-1.png)
-
-
-## About Keras
-
-Keras is a minimalist, highly modular neural networks library, written in Python and capable of running on top of either TensorFlow or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research.
-
-Use Keras if you need a deep learning library that:
-
-allows for easy and fast prototyping (through total modularity, minimalism, and extensibility).
-supports both convolutional networks and recurrent networks, as well as combinations of the two.
-supports arbitrary connectivity schemes (including multi-input and multi-output training).
-runs seamlessly on CPU and GPU.
-Read the documentation [Keras.io](http://keras.io/)
-
-Keras is compatible with: Python 2.7-3.5.
